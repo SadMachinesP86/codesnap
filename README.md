@@ -144,7 +144,6 @@ CodeSnap::from_config("Your config")?;
 Or if you are using CLI tool, CodeSnap will generate a default config file for you under `~/.config/CodeSnap`, you can modify the config file to customize the snapshot:
 
 ```jsonc
-// Both "CaskaydiaCove Nerd Font" and "Pacifico" is pre-installed in CodeSnap, you can use them out of the box
 {
   "theme": "candy",
   "window": {
@@ -197,6 +196,10 @@ Or if you are using CLI tool, CodeSnap will generate a default config file for y
   }
 }
 ```
+The following fonts are packaged with CodeSnap and can be used out of the box:
+* CaskaydiaCove Nerd Font
+* Pacifico
+* FiraCode Nerd Font Mono
 
 All configuration items can be found in [config.rs](https://github.com/mistricky/CodeSnap/blob/main/core/src/config.rs)
 
