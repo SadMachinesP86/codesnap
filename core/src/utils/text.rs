@@ -7,6 +7,8 @@ use tiny_skia::{Paint, Pixmap, Rect, Transform};
 const CASKAYDIA_COVE_NERD_FONT: &[u8] =
     include_bytes!("../../assets/fonts/CaskaydiaCoveNerdFont-Regular.ttf");
 const PACIFICO_FONT: &[u8] = include_bytes!("../../assets/fonts/Pacifico-Regular.ttf");
+const FIRA_CODE_FONT: &[u8] =
+    include_bytes!("../../assets/fonts/Fira Code Regular Nerd Font Complete Mono.ttf");
 
 pub struct FontRenderer {
     font_system: FontSystem,
@@ -28,6 +30,7 @@ impl FontRenderer {
         font_system
             .db_mut()
             .load_font_data(CASKAYDIA_COVE_NERD_FONT.into());
+        font_system.db_mut().load_font_data(FIRA_CODE_FONT.into());
         font_system.db_mut().load_fonts_dir(&fonts_folder);
 
         FontRenderer {
